@@ -6,7 +6,7 @@ import "./styles/variables.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/-bloom-studio">
       <App />
     </BrowserRouter>
   </React.StrictMode>

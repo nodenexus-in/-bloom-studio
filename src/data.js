@@ -19,7 +19,7 @@ export const business = {
 
 function imgs(category, count) {
   return Array.from({ length: count }, (_, i) => ({
-    src: `/images/gallery/${category}/${String(i + 1).padStart(2, "0")}.jpg`,
+    src: `${import.meta.env.BASE_URL}images/gallery/${category}/${String(i + 1).padStart(2, "0")}.jpg`,
     title: category,
   }));
 }
