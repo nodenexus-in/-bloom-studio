@@ -1,0 +1,100 @@
+.gallery-page {
+  background: #fdf6f3;
+  color: #241419;
+  padding: 7vw 7vw 12vw;
+}
+
+.gallery-hero-copy {
+  max-width: 520px;
+  color: #8a7377;
+  line-height: 1.8;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.gallery-category-nav {
+  position: sticky;
+  top: 82px;
+  z-index: 10;
+
+  background: rgba(253, 246, 243, 0.94);
+  backdrop-filter: blur(12px);
+
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+
+  padding: 18px 0;
+  margin-bottom: 80px;
+
+  border-bottom: 1px solid rgba(36, 20, 25, 0.12);
+}
+
+.gallery-category-nav a {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 23px;
+  color: #8a7377;
+  transition: 0.3s ease;
+}
+
+.gallery-category-nav a:hover,
+.gallery-category-nav a.active {
+  color: #241419;
+  border-bottom: 1px solid #241419;
+  padding-bottom: 5px;
+}
+
+.gallery-category {
+  padding-bottom: 110px;
+}
+
+.gallery-category-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+
+  margin-bottom: 35px;
+}
+
+.gallery-category-heading h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(38px, 5vw, 68px);
+  font-weight: 400;
+  line-height: 1;
+  margin: 15px 0 0;
+}
+
+.gallery-category-heading > span {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8a7377;
+  padding-bottom: 8px;
+}
+
+@media (max-width: 700px) {
+  .gallery-page {
+    padding: 15vw 6vw;
+  }
+
+  .gallery-category-nav {
+    top: 70px;
+    gap: 16px;
+    margin-bottom: 55px;
+  }
+
+  .gallery-category {
+    padding-bottom: 75px;
+  }
+
+  .gallery-category-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .gallery-category-heading h2 {
+    font-size: 45px;
+  }
+}

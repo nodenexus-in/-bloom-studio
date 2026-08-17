@@ -1,0 +1,74 @@
+.services-page {
+  background: #fdf6f3;
+  font-size: 20px;
+  color: #241419;
+}
+
+.services-content {
+  padding: 10vw 7vw;
+}
+
+.services-list-large {
+  border-top: 1px solid #24141926;
+}
+
+.services-list-large .service-row {
+  padding: 42px 0;
+}
+
+.services-list-large .service-row h3 {
+  font-size: clamp(30px, 4vw, 55px);
+}
+
+.service-number {
+  font-size: 25px;
+}
+.services-list-large .service-row p {
+  font-size: 18px;
+
+  line-height: 1.8;
+}
+
+.services-statement {
+  background: #241419;
+
+  color: #ffffff;
+  
+  padding: 13vw 7vw;
+}
+
+.services-statement h2 {
+  font-size: clamp(45px, 6vw, 85px);
+
+  line-height: 0.95;
+
+  font-weight: 400;
+
+  letter-spacing: -0.04em;
+
+  margin: 25px 0;
+}
+
+.services-statement h2 em {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+@media (max-width: 900px) {
+  .services-list-large .service-row {
+    grid-template-columns: 45px 1fr 35px;
+  }
+
+  .services-list-large .service-row p {
+    grid-column: 2 / 3;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-content {
+    padding: 18vw 6vw;
+  }
+
+  .services-statement {
+    padding: 20vw 6vw;
+  }
+}

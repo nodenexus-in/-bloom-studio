@@ -1,0 +1,140 @@
+:root {
+  --ink: #241419;
+  --muted: #8a7377;
+  --paper: #fdf6f3;
+  --cream: #f6e8e6;
+  --soft: #f3e1df;
+  --dark: #241419;
+  --line: rgba(36, 20, 25, 0.15);
+
+  --brand: #e11a49;
+  --brand-dark: #b01238;
+  --brand-light: #fbe4ea;
+
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: var(--paper);
+
+  color: var(--ink);
+
+  font-family: var(--sans);
+}
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  display: block;
+
+  max-width: 100%;
+}
+/* Shared section rhythm used across every page (About, Services,
+   Gallery, Contact, Home). Sections can still override background
+   or layout; this only supplies consistent breathing room, since
+   several pages reference a bare ".section" class with no rules. */
+.section {
+  padding: 10vw 7vw;
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 12vw 6vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 18vw 6vw;
+  }
+}
+
+/* Accessible, on-brand focus states instead of the default blue ring */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 1.5px solid var(--ink);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* ---------------------------------------------------------- */
+/* Scroll-reveal (see components/Reveal.jsx)                   */
+/* ---------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---------------------------------------------------------- */
+/* Fine film-grain texture — a quiet, premium editorial detail */
+/* ---------------------------------------------------------- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------------------------------------------------------- */
+/* Soft fade-in for images that opt in via .fade-img (used by  */
+/* GalleryGrid and hero photos). Opt-in rather than a global    */
+/* rule so images can never get stuck invisible if a load       */
+/* event is somehow missed.                                     */
+/* ---------------------------------------------------------- */
+.fade-img {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.fade-img.is-loaded {
+  opacity: 1;
+}

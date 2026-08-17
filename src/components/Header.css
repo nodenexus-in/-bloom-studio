@@ -1,0 +1,253 @@
+.site-header {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 95px;
+  padding: 0 5vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #ffffff;
+  transition: all 0.4s ease;
+}
+
+.site-header.is-scrolled {
+  background: rgba(253, 246, 243, 0.96);
+  color: #241419;
+  box-shadow: 0 1px 0 rgba(36, 20, 25, 0.15);
+  backdrop-filter: blur(12px);
+}
+
+/* Every inner page opens on a light, flat-colour hero (not a photo),
+   so the header needs dark text from the first frame instead of the
+   white-on-white it inherits from the home page's dark photo hero. */
+.site-header.on-light-page:not(.is-scrolled) {
+  color: #241419;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+.brand-logo {
+  width: 71px;
+  height: 71px;
+  border-radius: 50%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.brand:hover .brand-logo {
+  transform: rotate(-8deg) scale(1.05);
+}
+
+.brand-text {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.15;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-text-line {
+  display: block;
+}
+
+.brand-text-line:first-child {
+  color: var(--brand);
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 30px;
+  margin-left: auto;
+  margin-right: 38px;
+}
+
+.desktop-nav a {
+  position: relative;
+
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  padding-bottom: 4px;
+
+  opacity: 0.78;
+  transition: opacity 0.3s ease;
+}
+
+.desktop-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+
+  height: 1px;
+  background: currentColor;
+
+  transition: right 0.3s ease;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a.active {
+  opacity: 1;
+}
+
+.desktop-nav a:hover::after,
+.desktop-nav a.active::after {
+  right: 0;
+}
+
+.header-cta {
+  border: 1px solid currentColor;
+  padding: 11px 17px;
+
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  transition: all 0.3s ease;
+}
+
+.header-cta:hover {
+  background: currentColor;
+  color: #241419;
+}
+
+.menu-button {
+  display: none;
+
+  background: transparent;
+  border: 0;
+
+  color: currentColor;
+
+  width: 38px;
+  padding: 0;
+
+  cursor: pointer;
+}
+
+.menu-button span {
+  display: block;
+
+  height: 1px;
+
+  background: currentColor;
+
+  margin: 7px 0;
+
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.2s ease;
+}
+
+/* Hamburger morphs into an X while the mobile menu is open */
+.site-header.menu-open .menu-button span:first-child {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.site-header.menu-open .menu-button span:last-child {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+.mobile-nav {
+  position: absolute;
+
+  top: 82px;
+  left: 0;
+  right: 0;
+
+  background: #fdf6f3;
+  color: #241419;
+
+  padding: 25px 5vw 35px;
+
+  display: grid;
+  gap: 20px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-12px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.mobile-nav.is-open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-nav a {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 25px;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.mobile-nav.is-open a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .desktop-nav,
+  .header-cta {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .mobile-nav {
+    top: 82px;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    height: 70px;
+    padding: 0 5vw;
+  }
+
+  .mobile-nav {
+    top: 70px;
+  }
+
+  .brand-mark {
+    font-size: 28px;
+  }
+
+  .brand-text {
+    font-size: 12px;
+  }
+}
+.nav-gallery{position:relative;display:flex;align-items:center}
+.gallery-dropdown{position:absolute;top:calc(100% + 22px);left:50%;transform:translate(-50%,8px);min-width:190px;padding:14px;background:rgba(253, 246, 243,.98);color:#241419;box-shadow:0 15px 35px rgba(0,0,0,.12);opacity:0;visibility:hidden;transition:.25s;display:grid;gap:0}
+.nav-gallery:hover 
+.gallery-dropdown{ 
+  opacity:1;
+  visibility:visible;
+  transform:translate(-50%,0)
+}
+.gallery-dropdown a{padding:10px 12px;font-size:20px!important;letter-spacing:.12em!important}
+.gallery-dropdown a:hover{background:#f3e1df}
+.mobile-gallery-group{display:grid;gap:12px}
+.mobile-gallery-links{display:grid;grid-template-columns:1fr 1fr;padding-left:18px;gap:10px 20px}
+.mobile-gallery-links a{font-family:var(--sans);font-size:12px!important;opacity:.65}

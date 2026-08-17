@@ -1,0 +1,47 @@
+.section-title {
+  max-width: 760px;
+
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: clamp(38px, 5vw, 70px);
+
+  line-height: 1;
+
+  font-weight: 400;
+
+  letter-spacing: -0.035em;
+
+  margin: 18px 0 0;
+}
+
+.section-title h2 em {
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-weight: 400;
+}
+
+.section-title p {
+  max-width: 530px;
+
+  color: #8a7377;
+
+  line-height: 1.8;
+
+  font-size: 20px;
+
+  margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    margin-bottom: 40px;
+  }
+
+  .section-title h2 {
+    font-size: 42px;
+  }
+}
