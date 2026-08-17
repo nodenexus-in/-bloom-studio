@@ -31,7 +31,9 @@ export default function Header() {
   return (
     <header className={`site-header ${scrolled ? "is-scrolled" : ""} ${open ? "menu-open" : ""} ${!isHome ? "on-light-page" : ""}`}>
       <Link to="/" className="brand" aria-label="Bloom Studio home">
-        <img className="brand-logo" src="/images/logo/bloom-logo.png" alt="Bloom Studio logo" />
+        <img className="brand-logo"
+         src={`${import.meta.env.BASE_URL}images/logo/bloom-logo.png`} 
+         alt="Bloom Studio logo" />
         <span className="brand-text">
           <span className="brand-text-line">BLOOM</span>
           <span className="brand-text-line">STUDIO</span>

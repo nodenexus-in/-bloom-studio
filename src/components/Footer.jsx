@@ -8,7 +8,9 @@ export default function Footer() {
       <div className="footer-top">
         <div>
           <div className="footer-brand">
-            <img className="footer-logo" src="public/logo_footer.png" alt="Bloom Studio logo" />
+            <img className="footer-logo" 
+            src={`${import.meta.env.BASE_URL}logo_footer.png`} 
+            alt="Bloom Studio logo" />
             <span>Bloom Studio</span>
           </div>
           <p>Newborn, maternity, toddler & family photography<br />in Salem, Tamil Nadu.</p>
