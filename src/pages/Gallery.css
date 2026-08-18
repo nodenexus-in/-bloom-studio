@@ -8,7 +8,7 @@
   max-width: 520px;
   color: #8a7377;
   line-height: 1.8;
-  font-size: 20px;
+  font-size: 16px;
   margin-top: 30px;
 }
 
@@ -33,7 +33,7 @@
 .gallery-category-nav a {
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-size: 23px;
+  font-size: 18px;
   color: #8a7377;
   transition: 0.3s ease;
 }
@@ -60,14 +60,14 @@
 
 .gallery-category-heading h2 {
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(38px, 5vw, 68px);
+  font-size: clamp(30px, 3.9vw, 53px);
   font-weight: 400;
   line-height: 1;
   margin: 15px 0 0;
 }
 
 .gallery-category-heading > span {
-  font-size: 10px;
+  font-size: 9px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #8a7377;
@@ -95,6 +95,6 @@
   }
 
   .gallery-category-heading h2 {
-    font-size: 45px;
+    font-size: 35px;
   }
 }

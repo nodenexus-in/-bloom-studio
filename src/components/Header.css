@@ -52,7 +52,7 @@
 
 .brand-text {
   font-family: "Playfair Display", Georgia, serif;
-  font-size: 18px;
+  font-size: 14px;
   font-style: italic;
   line-height: 1.15;
   display: flex;
@@ -77,7 +77,7 @@
 .desktop-nav a {
   position: relative;
 
-  font-size: 18px;
+  font-size: 14px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 
@@ -114,7 +114,7 @@
   border: 1px solid currentColor;
   padding: 11px 17px;
 
-  font-size: 17px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 
@@ -193,7 +193,7 @@
 
 .mobile-nav a {
   font-family: "Playfair Display", Georgia, serif;
-  font-size: 25px;
+  font-size: 20px;
 
   opacity: 0;
   transform: translateY(10px);
@@ -231,11 +231,11 @@
   }
 
   .brand-mark {
-    font-size: 28px;
+    font-size: 22px;
   }
 
   .brand-text {
-    font-size: 12px;
+    font-size: 9px;
   }
 }
 .nav-gallery{position:relative;display:flex;align-items:center}
@@ -246,7 +246,7 @@
   visibility:visible;
   transform:translate(-50%,0)
 }
-.gallery-dropdown a{padding:10px 12px;font-size:20px!important;letter-spacing:.12em!important}
+.gallery-dropdown a{padding:10px 12px;font-size:16px!important;letter-spacing:.12em!important}
 .gallery-dropdown a:hover{background:#f3e1df}
 .mobile-gallery-group{display:grid;gap:12px}
 .mobile-gallery-links{display:grid;grid-template-columns:1fr 1fr;padding-left:18px;gap:10px 20px}

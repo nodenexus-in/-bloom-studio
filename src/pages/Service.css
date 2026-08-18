@@ -1,6 +1,6 @@
 .services-page {
   background: #fdf6f3;
-  font-size: 20px;
+  font-size: 16px;
   color: #241419;
 }
 
@@ -17,14 +17,14 @@
 }
 
 .services-list-large .service-row h3 {
-  font-size: clamp(30px, 4vw, 55px);
+  font-size: clamp(23px, 3.12vw, 43px);
 }
 
 .service-number {
-  font-size: 25px;
+  font-size: 20px;
 }
 .services-list-large .service-row p {
-  font-size: 18px;
+  font-size: 14px;
 
   line-height: 1.8;
 }
@@ -38,7 +38,7 @@
 }
 
 .services-statement h2 {
-  font-size: clamp(45px, 6vw, 85px);
+  
 
   line-height: 0.95;
 
