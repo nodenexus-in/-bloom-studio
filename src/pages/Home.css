@@ -499,11 +499,10 @@
 }
 
 .home-contact h2 {
-  
 
   line-height: 0.92;
 
-  font-weight: 400;
+  font-weight: clamp(37px, 5.07vw, 74px);
 
   margin: 25px 0 45px;
 }

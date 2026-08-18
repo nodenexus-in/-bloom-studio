@@ -13,18 +13,24 @@ export default function Reveal({ as: Tag = "div", delay = 0, className = "", chi
     const node = ref.current;
     if (!node) return;
 
-    const observer = new IntersectionObserver(
+        const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
           observer.disconnect();
         }
       },
-      { threshold: 0.16, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0, rootMargin: "0px 0px 80px 0px" }
     );
 
     observer.observe(node);
-    return () => observer.disconnect();
+
+    const fallback = setTimeout(() => setVisible(true), 1500);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(fallback);
+    };
   }, []);
 
   return (
